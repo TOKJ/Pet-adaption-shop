@@ -1,17 +1,24 @@
 package PetShop;
 
 //Superclass
-class Pets {
+class Pet {
 
         protected String name;
         protected String type;
 
-        public Pets(String name, String type) {
+        public Pet(String name, String type) {
             this.name = name;
             this.type = type;
         }
 
-        //Måske lav getters og setters hvis noget ikke virker!
+
+        public String getName() {
+            return name;
+        }
+
+        public String getType() {
+            return type;
+        }
 
 
         @Override

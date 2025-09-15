@@ -1,15 +1,15 @@
 package PetShop;
 
-//Subclass lizzards
-class Lizzards extends Pets {
+//Subclass lizzard
+class Lizzard extends Pet {
 
-        public Lizzards(String name,String type) {
+        public Lizzard(String name,String type) {
             super(name, type);
         }
 
         @Override
         public String toString() {
-            return "Pet: " + name + "Type: " + type;
+            return "Pet: " + name + "\nType: " + type + "\nThe lizzard says: " + hiss() + " \n";
         }
 
         public void hiss() {
