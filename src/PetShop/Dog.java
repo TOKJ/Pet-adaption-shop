@@ -12,8 +12,8 @@ class Dog extends Pet {
         return "Pet: " + name + "\nType: " + type + "\nThe dog says: " + bark() + " \n";
     }
 
-    public void bark() {
-        System.out.println(name + "hunden gør: Bark bark bark!");
+    public String bark() {
+        return name + "hunden gør: Bark bark bark!";
     }
 }
 

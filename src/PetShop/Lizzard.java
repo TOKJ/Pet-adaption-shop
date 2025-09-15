@@ -12,8 +12,7 @@ class Lizzard extends Pet {
             return "Pet: " + name + "\nType: " + type + "\nThe lizzard says: " + hiss() + " \n";
         }
 
-        public void hiss() {
-            System.out.println(name + "Lizzards says: Hizz hizz hizz");
+        public String hiss() {
+            return name + " Lizzard says: Hizz hizz hizz";
         }
     }
-}

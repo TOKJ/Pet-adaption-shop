@@ -13,8 +13,8 @@ class Cat extends Pet {
             return "Pet: " + name + "\nType: " + type + "\nThe cat says: " + meow() + " \n";
         }
 
-    public void meow() {
-        System.out.println(name + "katten siger meow: meow meow meow!");
+    public String meow() {
+        return name + "katten siger meow: meow meow meow!";
 
 
     }

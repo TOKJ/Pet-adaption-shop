@@ -26,5 +26,3 @@ class Pet {
             return "Pet: " + name + "Type: " + type;
         }
     }
-
-}
