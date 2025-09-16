@@ -16,6 +16,5 @@ class Cat extends Pet {
     public String meow() {
         return name + "katten siger meow: meow meow meow!";
 
-
     }
 }

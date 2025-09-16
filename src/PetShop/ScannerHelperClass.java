@@ -11,6 +11,7 @@ public class ScannerHelperClass {
 
         int antalPets = 0;
 
+
         while (antalPets <= 0 || antalPets > 25) {
             System.out.print("Indtast antallet af kæledyr til registrering: ");
 
@@ -33,7 +34,7 @@ public class ScannerHelperClass {
         Pet[] petsRegister = new Pet[antalPets];
 
         for (int i = 0; i < antalPets; i++) {
-            System.out.println("\n\nIndtast navn til kæledyr: ";
+            System.out.println("\n\nIndtast navn til kæledyr: ");
             System.out.print("Kæledyr: " + (i + 1) + "\t-\t" + "Indtast navn: ");
             String name = scanner.nextLine();
             System.out.println();
@@ -56,7 +57,18 @@ public class ScannerHelperClass {
                 }
             }
 
-            petsRegister[i] = new Pet(name, type);
+            //  petsRegister[i] = new Pet(name, type);
+
+            if (type.equalsIgnoreCase("cat")) {
+                petsRegister[i] = new Cat(name, "Cat");
+
+            } else if (type.equalsIgnoreCase("dog")) {
+                petsRegister[i] = new Dog(name, "Dog");
+
+            } else if (type.equalsIgnoreCase("Lizzard")) {
+                petsRegister[i] = new Lizzard(name, "Lizzard");
+            }
+
 
         }
 
