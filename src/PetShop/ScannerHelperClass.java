@@ -10,20 +10,23 @@ public class ScannerHelperClass {
         Scanner scanner = new Scanner(System.in);
 
         int antalPets = 0;
+        int maxAmountOfPets = 25;
 
 
-        while (antalPets <= 0 || antalPets > 25) {
-            System.out.print("Indtast antallet af kæledyr til registrering: ");
+        while (antalPets <= 0 || antalPets > maxAmountOfPets) {
+            System.out.print("Please write the amount of pets for registering: ");
 
             if (scanner.hasNextInt()) {
                 antalPets = scanner.nextInt();
                 scanner.nextLine();
 
                 if (antalPets <= 0) {
-                    System.out.println("Indtast venligst et helt tal over nul.");
+                    System.out.println("Please only input a number above 0.");
+                } else if (antalPets > maxAmountOfPets) {
+                    System.out.println("Please only input a max of " + maxAmountOfPets + " pets!");
                 }
             } else {
-                System.out.println("Fejl: du skal indtaste et heltal!");
+                System.out.println("Error: please input a whole number!");
                 //scanner.next sletter forkert indput!
                 scanner.nextLine();
             }
@@ -34,8 +37,8 @@ public class ScannerHelperClass {
         Pet[] petsRegister = new Pet[antalPets];
 
         for (int i = 0; i < antalPets; i++) {
-            System.out.println("\n\nIndtast navn til kæledyr: ");
-            System.out.print("Kæledyr: " + (i + 1) + "\t-\t" + "Indtast navn: ");
+            System.out.println("\n\nEnter name of pet: ");
+            System.out.print("Pet: " + (i + 1) + "\t  -\t" + "Enter name: ");
             String name = scanner.nextLine();
             System.out.println();
 
@@ -45,15 +48,15 @@ public class ScannerHelperClass {
             boolean validType = false;
 
             while (!validType) {
-                System.out.println("Følgende typer kan indtastes: cat, dog, lizzard!");
-                System.out.print("Indtast type for \t" + name + ": ");
+                System.out.println("The following pet types are allowed: cat, dog, lizzard!");
+                System.out.print("Input pet type for " + name + ": ");
                 type = scanner.nextLine();
                 System.out.println();
 
                 if (type.equalsIgnoreCase("dog") || type.equalsIgnoreCase("cat") ||type.equalsIgnoreCase("lizzard")) {
                     validType = true;
                 } else{
-                    System.out.println("Fejl: indtast en af føglende typer: cat, dog, lizzard!");
+                    System.out.println("Error: please only input one of the following types: cat, dog, lizzard!");
                 }
             }
 

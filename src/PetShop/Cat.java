@@ -10,11 +10,11 @@ class Cat extends Pet {
 
         @Override
         public String toString() {
-            return "Pet: " + name + "\nType: " + type + "\nThe cat says: " + meow() + " \n";
+            return "Pet: " + name + "\nType: " + type + "\n" + meow() + "\n";
         }
 
     public String meow() {
-        return name + "katten siger meow: meow meow meow!";
+        return name + " says: meow meow meow!";
 
     }
 }

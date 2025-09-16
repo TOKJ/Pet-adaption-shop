@@ -9,10 +9,10 @@ class Lizzard extends Pet {
 
         @Override
         public String toString() {
-            return "Pet: " + name + "\nType: " + type + "\nThe lizzard says: " + hiss() + " \n";
+            return "Pet: " + name + "\nType: " + type + "\n" + hiss() + "\n";
         }
 
         public String hiss() {
-            return name + " Lizzard says: Hizz hizz hizz";
+            return name + " says: Hizz hizz hizz!";
         }
     }

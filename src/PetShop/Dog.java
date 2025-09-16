@@ -9,11 +9,11 @@ class Dog extends Pet {
 
     @Override
     public String toString() {
-        return "Pet: " + name + "\nType: " + type + "\nThe dog says: " + bark() + " \n";
+        return "Pet: " + name + "\nType: " + type +  "\n"+ bark() + "\n";
     }
 
     public String bark() {
-        return name + "hunden gør: Bark bark bark!";
+        return name + " says: Bark bark bark!";
     }
 }
 
