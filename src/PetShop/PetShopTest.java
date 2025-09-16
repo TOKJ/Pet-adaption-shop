@@ -12,7 +12,7 @@ public class PetShopTest {
 
         Pet[] pets = helperClass.askAmountOfPets();
 
-        System.out.println("The following pets are not registered: ");
+        System.out.println("The following pets are now registered: ");
         for (Pet pet : pets) {
             System.out.println(pet);
         }
